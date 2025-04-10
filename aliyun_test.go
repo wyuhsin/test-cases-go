@@ -14,7 +14,7 @@ func TestAliyunOssUpload(t *testing.T) {
 	const (
 		OSS_BUCKET_REGION   = "cn-hongkong"
 		OSS_BUCKET_ENDPOINT = "https://oss-cn-hongkong.aliyuncs.com"
-		OSS_BUCKET_NAME     = "haiwell-hongkong"
+		OSS_BUCKET_NAME     = "a"
 		OSS_OBJECT_KEY      = "assets/a.txt"
 		OSS_UPLOAD_FILEPATH = "./assets/a.txt"
 	)
@@ -58,7 +58,7 @@ func TestAliyunEmailSend(t *testing.T) {
 		EMAIL_ACCOUNT           = "noreply@mail.synwell.net"
 		EMAIL_ADDRESS_TYPE      = 1
 		EMAIL_REPLAY_TO_ADDRESS = false
-		EMAIL_TO_ADDRESS        = "messy_things@outlook.com"
+		EMAIL_TO_ADDRESS        = "a@outlook.com"
 		EMAIL_SUBJECT           = "Test Email"
 		EMAIL_HTML_BODY         = "<h1>Test Email</h1>"
 	)

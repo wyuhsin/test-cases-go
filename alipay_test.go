@@ -31,10 +31,10 @@ func TestAlipayTradeAppPay(t *testing.T) {
 		TRADE_APP_PAY_OUT_TRADE_NO = "9876543211"
 		TRADE_APP_PAY_TOTAL_AMOUNT = "0.01"
 		TRADE_APP_PAY_PRODUCT_CODE = "QUICK_MEDICAL_PAY"
-		TRADE_APP_PAY_NOTIFY_URL   = "https://cloud.haiwell.com/api/v1/alipay/notify"
+		TRADE_APP_PAY_NOTIFY_URL   = ""
 
-		TRADE_APP_PAY_GOODS_ID       = "iotcard"
-		TRADE_APP_PAY_GOODS_NAME     = "IoT Card"
+		TRADE_APP_PAY_GOODS_ID       = "Apple"
+		TRADE_APP_PAY_GOODS_NAME     = "Red Apple"
 		TRADE_APP_PAY_GOODS_QUANTITY = 1
 		TRADE_APP_PAY_GOODS_PRICE    = 0.01
 	)
@@ -80,12 +80,12 @@ func TestAlipayTradePagePay(t *testing.T) {
 		TRADE_PAGE_PAY_OUT_TRADE_NO  = "9876543212"
 		TRADE_PAGE_PAY_TOTAL_AMOUNT  = "0.01"
 		TRADE_PAGE_PAY_PRODUCT_CODE  = "FAST_INSTANT_TRADE_PAY"
-		TRADE_PAGE_PAY_NOTIFY_URL    = "https://cloud.haiwell.com/api/v1/alipay/notify"
+		TRADE_PAGE_PAY_NOTIFY_URL    = ""
 		TRADE_PAGE_PAY_MODE_QR_CODE  = "4"
 		TRADE_PAGE_PAY_QR_CODE_WIDTH = "100"
 
-		TRADE_PAGE_PAY_GOODS_ID       = "iotcard"
-		TRADE_PAGE_PAY_GOODS_NAME     = "IoT Card"
+		TRADE_PAGE_PAY_GOODS_ID       = "Apple"
+		TRADE_PAGE_PAY_GOODS_NAME     = "Red Apple"
 		TRADE_PAGE_PAY_GOODS_QUANTITY = 1
 		TRADE_PAGE_PAY_GOODS_PRICE    = 0.01
 	)
