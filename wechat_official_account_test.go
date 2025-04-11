@@ -39,6 +39,12 @@ func TestPushOfficialAccountMessage(t *testing.T) {
 	// data["const8"] = &message.TemplateDataItem{Value: req.KeyWord4, Color: "#ff0000"}
 	// data["thing5"] = &message.TemplateDataItem{Value: req.KeyWord5, Color: "#ff0000"}
 
+	// data["keyword1"] = &message.TemplateDataItem{Value: "别动我的正式企业设备"}
+	// data["keyword2"] = &message.TemplateDataItem{Value: "2025-02-18 14:00:00"}
+	// data["keyword3"] = &message.TemplateDataItem{Value: "内部变量_1.是否报警"}
+	// data["keyword4"] = &message.TemplateDataItem{Value: "Alert"}
+	// data["keyword5"] = &message.TemplateDataItem{Value: "报警内容"}
+
 	templateMessageReq := &message.TemplateMessage{
 		ToUser:     openId,
 		TemplateID: templateId,
