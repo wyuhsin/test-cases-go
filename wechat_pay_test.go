@@ -121,10 +121,10 @@ func TestWechatPayH5Prepay(t *testing.T) {
 	const (
 		H5_PREPAY_DESCRIPTION  = "HAIWELL TEST"
 		H5_PREPAY_OUT_TRADE_NO = "haiwell_002"
-		H5_PREPAY_NOTIFY_URL   = "https://cloud.haiwell.com/api/v1/internal/wechatNotify"
+		H5_PREPAY_NOTIFY_URL   = ""
 		H5_PREPAY_AMOUNT_TOTAL = 1
 
-		H5_PREPAY_PAYER_CLIENT_IP = "112.48.26.71"
+		H5_PREPAY_PAYER_CLIENT_IP = ""
 		// Type: Wap / iOS / Android
 		H5_PREPAY_H5_INFO_TYPE = "Wap"
 	)
@@ -181,7 +181,7 @@ func TestWechatPayAppPrepay(t *testing.T) {
 	const (
 		APP_PREPAY_DESCRIPTION  = "HAIWELL TEST"
 		APP_PREPAY_OUT_TRADE_NO = "haiwell_002"
-		APP_PREPAY_NOTIFY_URL   = "https://cloud.haiwell.com/api/v1/internal/wechatNotify"
+		APP_PREPAY_NOTIFY_URL   = ""
 		APP_PREPAY_AMOUNT_TOTAL = 1
 	)
 
@@ -231,7 +231,7 @@ func TestWechatPayNativePrepay(t *testing.T) {
 	const (
 		NATIVE_PREPAY_DESCRIPTION  = "HAIWELL TEST"
 		NATIVE_PREPAY_OUT_TRADE_NO = "haiwell_001"
-		NATIVE_PREPAY_NOTIFY_URL   = "https://cloud.haiwell.com/api/v1/internal/wechatNotify"
+		NATIVE_PREPAY_NOTIFY_URL   = ""
 		NATIVE_PREPAY_AMOUNT_TOTAL = 1
 	)
 
