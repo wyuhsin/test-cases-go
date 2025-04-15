@@ -14,6 +14,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/mozillazg/go-pinyin v0.20.0
 	github.com/pion/webrtc/v3 v3.3.5
+	github.com/shopspring/decimal v1.4.0
 	github.com/silenceper/wechat/v2 v2.1.7
 	github.com/smartwalle/alipay/v3 v3.2.24
 	github.com/wechatpay-apiv3/wechatpay-go v0.2.20
