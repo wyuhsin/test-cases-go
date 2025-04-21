@@ -38,10 +38,10 @@ func TestWechatPayBack(t *testing.T) {
 		Summary      string    `json:"summary"`
 		Resource     struct {
 			OriginalType   string `json:"original_type"`
-			Algorithm      string `json:"algorithm"`       // AEAD_AES_256_GCM加密算法
-			Ciphertext     string `json:"ciphertext"`      // 加密后的业务数据
-			AssociatedData string `json:"associated_data"` // 附加数据(可能为空)
-			Nonce          string `json:"nonce"`           // 加密使用的随机串
+			Algorithm      string `json:"algorithm"`
+			Ciphertext     string `json:"ciphertext"`
+			AssociatedData string `json:"associated_data"`
+			Nonce          string `json:"nonce"`
 		} `json:"resource"`
 	}
 
@@ -119,14 +119,16 @@ func TestWechatPayBack(t *testing.T) {
 func TestWechatPayH5Prepay(t *testing.T) {
 
 	const (
-		H5_PREPAY_DESCRIPTION  = "HAIWELL TEST"
-		H5_PREPAY_OUT_TRADE_NO = "haiwell_002"
-		H5_PREPAY_NOTIFY_URL   = ""
+		H5_PREPAY_DESCRIPTION  = "TEST"
+		H5_PREPAY_OUT_TRADE_NO = "12345678910"
+		H5_PREPAY_NOTIFY_URL   = "https://google.com"
 		H5_PREPAY_AMOUNT_TOTAL = 1
 
-		H5_PREPAY_PAYER_CLIENT_IP = ""
+		H5_PREPAY_PAYER_CLIENT_IP = "1.1.1.1"
 		// Type: Wap / iOS / Android
-		H5_PREPAY_H5_INFO_TYPE = "Wap"
+		H5_PREPAY_H5_INFO_TYPE_WAP     = "Wap"
+		H5_PREPAY_H5_INFO_TYPE_IOS     = "iOS"
+		H5_PREPAY_H5_INFO_TYPE_ANDROID = "Android"
 	)
 
 	appId := os.Getenv("WECHAT_PAY_APP_ID")
@@ -165,7 +167,7 @@ func TestWechatPayH5Prepay(t *testing.T) {
 		SceneInfo: &h5.SceneInfo{
 			PayerClientIp: core.String(H5_PREPAY_PAYER_CLIENT_IP),
 			H5Info: &h5.H5Info{
-				Type: core.String(H5_PREPAY_H5_INFO_TYPE),
+				Type: core.String(H5_PREPAY_H5_INFO_TYPE_WAP),
 			},
 		},
 	})
@@ -179,9 +181,9 @@ func TestWechatPayH5Prepay(t *testing.T) {
 func TestWechatPayAppPrepay(t *testing.T) {
 
 	const (
-		APP_PREPAY_DESCRIPTION  = "HAIWELL TEST"
-		APP_PREPAY_OUT_TRADE_NO = "haiwell_002"
-		APP_PREPAY_NOTIFY_URL   = ""
+		APP_PREPAY_DESCRIPTION  = "TEST"
+		APP_PREPAY_OUT_TRADE_NO = "1234567890"
+		APP_PREPAY_NOTIFY_URL   = "https://google.com"
 		APP_PREPAY_AMOUNT_TOTAL = 1
 	)
 
@@ -229,9 +231,9 @@ func TestWechatPayAppPrepay(t *testing.T) {
 func TestWechatPayNativePrepay(t *testing.T) {
 
 	const (
-		NATIVE_PREPAY_DESCRIPTION  = "HAIWELL TEST"
-		NATIVE_PREPAY_OUT_TRADE_NO = "haiwell_001"
-		NATIVE_PREPAY_NOTIFY_URL   = ""
+		NATIVE_PREPAY_DESCRIPTION  = "TEST"
+		NATIVE_PREPAY_OUT_TRADE_NO = "001"
+		NATIVE_PREPAY_NOTIFY_URL   = "https://google.com"
 		NATIVE_PREPAY_AMOUNT_TOTAL = 1
 	)
 
@@ -271,7 +273,7 @@ func TestWechatPayNativePrepay(t *testing.T) {
 		},
 	})
 	if err != nil {
-		t.Fatalf("Failed to create NATIVE_PREPAY order: %s\n", err.Error())
+		t.Fatalf("Failed to create native prepay order: %s\n", err.Error())
 	}
 
 	t.Logf("status=%d resp=%s", result.Response.StatusCode, resp)

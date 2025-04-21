@@ -18,6 +18,8 @@ require (
 	github.com/silenceper/wechat/v2 v2.1.7
 	github.com/smartwalle/alipay/v3 v3.2.24
 	github.com/wechatpay-apiv3/wechatpay-go v0.2.20
+	golang.org/x/text v0.21.0
+	software.sslmate.com/src/go-pkcs12 v0.5.0
 )
 
 require (
